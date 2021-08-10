@@ -1,2 +1,3 @@
-// import './view/data.js';
 import './view/slider.js';
+import './view/popup.js';
+import './view/persona.js';

@@ -13,7 +13,6 @@ body {
 
 .canvas__image-furniture {
   position: absolute;
-
   top: 0;
   left: 0;
 }
@@ -28,6 +27,7 @@ body {
   position: absolute;
   top: 438px;
   left: 434px;
+  transition: 0.5s;
 }
 
 /* Нижняя панель */
@@ -158,7 +158,7 @@ body {
 /* Попап */
 
 .overlay {
-  display: block;
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -171,8 +171,103 @@ body {
   width: 523px;
   height: 455px;
   background: url('./image/popup/panel-rating.png') 0 0 no-repeat;
-  position: absolute;
-  top: 82px;
+  position: relative;
+  top: 0;
   left: 240px;
-  /* transform: translateX(1000px); */
+  transform: translateY(-120%);
+}
+
+.popup__button-close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: url('./image/popup/button-close.png') 0 0 no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__title-rating {
+  width: 265px;
+  height: 33px;
+  position: absolute;
+  top: -5px;
+  left: 135px;
+  background: url('./image/popup/title-rating.png') 0 0 no-repeat;
+}
+
+.popup__title-description {
+  width: 405px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: url('./image/popup/title-description.png') 0 0 no-repeat;
+}
+
+.popup__rating-wrapper {
+  width: 465px;
+  height: 325px;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  background: url('./image/popup/bg.png') 0 0 no-repeat;
+  overflow-y: auto;
+}
+
+.popup__rating-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.popup__rating-players {
+  position: relative;
+  top: 50px;
+  width: 404px;
+  height: 30px;
+  background: url('./image/popup/rating-players.png') 0 0 no-repeat;
+  margin: 5px auto;
+}
+
+.popup__rating-list {
+  width: 404px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 16px;
+  color: white;
+  padding: 0;
+  margin: 0 5px 0;
+}
+
+.popup__rating-list:last-child {
+  margin: 0;
+}
+
+.popup__rating-item {
+  overflow: hidden;
+}
+
+.player-position {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  padding: 0 0 0 10px;
+}
+
+.player-image {
+  width: 27px;
+  height: 27px;
+  padding: 0;
+}
+
+.player-name {
+  width: 225px;
+  padding: 0 5px;
+}
+
+.player-experience {
+  width: 75px;
+  padding: 0 5px;
 }

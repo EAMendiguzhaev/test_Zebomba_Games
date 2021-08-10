@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <div class="container">
     <div class="canvas">
       <img class='canvas__image-furniture' src="image/furniture.png" alt="" srcset="" width="980" height="605">
@@ -47,13 +46,30 @@
     <div class="overlay"></div>
 
     <div class="popup">
-      <div class="popup__element-one"></div>
-      <div class="popup__element-two"></div>
-      <div class="popup__element-three"></div>
+      <div class="popup__title-rating"></div>
+
+      <div class="popup__rating-wrapper">
+        <div class="popup__title-description"></div>
+      </div>
+
+      <button class="popup__button-close" type="button"></button>
     </div>
   </div>
 
+  <template id="popup-template">
+    <div class="popup__rating-players">
+      <ul class="popup__rating-list">
+        <li class="popup__rating-item player-position"></li>
+        <li class="popup__rating-item player-image"><img class="popup__rating-image" src="" width="27" height="27"
+            alt="Аватар пользователя"></li>
+        <li class="popup__rating-item player-name"></li>
+        <li class="popup__rating-item player-experience"></li>
+      </ul>
+    </div>
+  </template>
+
   <script src="./bundle.js"></script>
+  <!-- <script src="../src/main.js" type="module"></script> -->
 </body>
 
 </html>
